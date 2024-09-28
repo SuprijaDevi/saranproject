@@ -5,6 +5,7 @@
     padding: 10px 20px;
     height: 50px;
     border-bottom: 1px solid grey;
+    z-index: 1001;
   }
   
   .logo {
@@ -18,6 +19,7 @@
     margin-left: auto;
     cursor: pointer;
     margin-left: 150px;
+    font-size: 1.3rem;
     /* justify-content: flex-end; */
   }
   
