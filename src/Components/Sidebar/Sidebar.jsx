@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
+import { FaAngleDown, FaAngleUp } from "react-icons/fa6"; // Import up icon
 import './Sidebar.css';
 
 const Sidebar = ({ isOpen, setSelectedContent }) => {
-  const [activeIndex, setActiveIndex] = useState(null); 
+  const [activeIndex, setActiveIndex] = useState(null);
 
-  const handleToggle = (index, content) => {
+  const handleToggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
-    setSelectedContent(content);
   };
 
   return (
-    <div className={`sidebar ${isOpen ? '' : 'open'}`}> 
+    <div className={`sidebar ${isOpen ? '' : 'open'}`}>
       <ul>
-        <li onClick={() => handleToggle(1, 'Calendar')}> 
-          Calendar
+        <li onClick={() => setSelectedContent('Home')}>Home</li>
+        <li>
+          <div className="list-item" onClick={() => handleToggle(1)}>
+            Calendar 
+            {activeIndex === 1 ? <FaAngleUp className='list-icon'/> : <FaAngleDown className='list-icon' />}
+          </div>
           {activeIndex === 1 && (
             <ul>
               <li onClick={() => setSelectedContent('January')}>January</li>
@@ -21,8 +25,11 @@ const Sidebar = ({ isOpen, setSelectedContent }) => {
             </ul>
           )}
         </li>
-        <li onClick={() => handleToggle(2, 'Subjects')}>
-          Subjects
+        <li>
+          <div className="list-item" onClick={() => handleToggle(2)}>
+            Subjects 
+            {activeIndex === 2 ? <FaAngleUp className='list-icon'/> : <FaAngleDown className='list-icon' />}
+          </div>
           {activeIndex === 2 && (
             <ul>
               <li onClick={() => setSelectedContent('Subject 1')}>Subject 1</li>
