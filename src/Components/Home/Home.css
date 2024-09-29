@@ -1,0 +1,14 @@
+.home-content {
+    display: flex;
+    text-align: center;
+    justify-content: start;
+    margin-left: 250px;
+    padding: 50px;
+    transition: margin-left 0.3s ease;
+}
+
+.home-content h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}

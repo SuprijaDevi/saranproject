@@ -1,11 +1,13 @@
 .navbar {
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    width: 97.5%;
     align-items: center;
     padding: 10px 20px;
     height: 50px;
     border-bottom: 1px solid grey;
-    z-index: 1001;
+    z-index: 999;
   }
   
   .logo {

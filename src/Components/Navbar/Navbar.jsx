@@ -3,12 +3,14 @@ import './Navbar.css';
 import { IoIosNotifications } from "react-icons/io";
 import { FaUserCircle, FaBars } from "react-icons/fa";
 import Sidebar from '../Sidebar/Sidebar';
+import Home from '../Home/Home';
 
 const Navbar = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false); // Toggle sidebar state
+  const [selectedContent, setSelectedContent] = useState('Home'); // Manage selected content
 
   const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
+    setSidebarOpen(!sidebarOpen); // Toggle the sidebar open/close state
   };
 
   return (
@@ -29,7 +31,11 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <Sidebar open={sidebarOpen} />
+      
+      <Sidebar isOpen={sidebarOpen} setSelectedContent={setSelectedContent} /> 
+      
+      
+      <Home selectedContent={selectedContent} />
     </div>
   );
 };

@@ -1,38 +1,39 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
 
-const Sidebar = ({ open }) => {
-  const [activeIndex, setActiveIndex] = useState(null);
+const Sidebar = ({ isOpen, setSelectedContent }) => {
+  const [activeIndex, setActiveIndex] = useState(null); 
 
-  const handleToggle = (index) => {
+  const handleToggle = (index, content) => {
     setActiveIndex(activeIndex === index ? null : index);
+    setSelectedContent(content);
   };
 
   return (
-    <div className={`sidebar ${open ? '' : 'open'}`}>
+    <div className={`sidebar ${isOpen ? '' : 'open'}`}> 
       <ul>
-        <li onClick={() => handleToggle(1)}>
-          Heading 1
+        <li onClick={() => handleToggle(1, 'Calendar')}> 
+          Calendar
           {activeIndex === 1 && (
             <ul>
-              <li>Subheading 1</li>
-              <li>Subheading 2</li>
+              <li onClick={() => setSelectedContent('January')}>January</li>
+              <li onClick={() => setSelectedContent('February')}>February</li>
             </ul>
           )}
         </li>
-        <li onClick={() => handleToggle(2)}>
-          Heading 2
+        <li onClick={() => handleToggle(2, 'Subjects')}>
+          Subjects
           {activeIndex === 2 && (
             <ul>
-              <li>Subheading 1</li>
-              <li>Subheading 2</li>
-              <li>Subheading 3</li>
+              <li onClick={() => setSelectedContent('Subject 1')}>Subject 1</li>
+              <li onClick={() => setSelectedContent('Subject 2')}>Subject 2</li>
+              <li onClick={() => setSelectedContent('Subject 3')}>Subject 3</li>
             </ul>
           )}
         </li>
-        <li onClick={() => handleToggle(3)}>Heading 3</li>
-        <li onClick={() => handleToggle(4)}>Heading 4</li>
-        <li onClick={() => handleToggle(5)}>Heading 5</li>
+        <li onClick={() => setSelectedContent('Timetable')}>Timetable</li>
+        <li onClick={() => setSelectedContent('Application')}>Application</li>
+        <li onClick={() => setSelectedContent('Skill Set')}>Skill Set</li>
       </ul>
     </div>
   );
