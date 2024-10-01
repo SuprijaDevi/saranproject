@@ -22,7 +22,7 @@ const Navbar = ({ toggleSidebar }) => {
         <IoIosNotifications className="icon" onClick={() => {setOpen(!open)}}/>
         <FaUserCircle className="icon" />
         <div className = {`dropdown-menu ${open? 'active' : 'inactive'}`}>
-        <p>No new notification</p>
+        <p>Notifications</p>
       </div>
       </div>
 

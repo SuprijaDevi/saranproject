@@ -23,11 +23,10 @@
   
   .footer {
     display: flex;
-    background-color: #F6F5F5;
+    background-color: #E5E1DA;
     justify-content: space-between;
     max-width: 100%;
     padding: 5px 15px;
-    border-top: 1px solid grey;
     transition: all 0.3s ease;
   }
   

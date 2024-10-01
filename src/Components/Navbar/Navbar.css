@@ -3,10 +3,10 @@
     justify-content: space-between;
     position: sticky;
     background-color: #F6F5F5;
+    box-shadow: 0 4px #F6F5F5;
     top: 0;
     align-items: center;
     padding: 10px 20px;
-    border-bottom: 1px solid grey;
   }
   
   .logo {
@@ -61,7 +61,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-50px);
+    transform: translateY(30px);
     transition: 0.3s ease;
     z-index: 9999;
   }
@@ -69,7 +69,7 @@
   .dropdown-menu.active {
     opacity: 1;
     visibility: visible;
-    transform: translateY(110px);
+    transform: translateY(90px);
   }
   
   .dropdown-menu p {
