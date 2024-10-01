@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css'; 
 import { IoIosNotifications } from "react-icons/io";
 import { FaUserCircle, FaBars } from "react-icons/fa";
 
 const Navbar = ({ toggleSidebar }) => {
+
+  const[open, setOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -16,8 +19,12 @@ const Navbar = ({ toggleSidebar }) => {
       </div>
 
       <div className="nav-icons">
-        <IoIosNotifications className="icon" />
+        <IoIosNotifications className="icon" onClick={() => {setOpen(!open)}}/>
         <FaUserCircle className="icon" />
+      </div>
+
+      <div className = {`dropdown-menu ${open? 'active' : 'inactive'}`}>
+        <p>No new notification</p>
       </div>
     </nav>
   );

@@ -20,8 +20,10 @@ const Home = ({ selectedContent, collapse }) => {
         {selectedContent === 'Application' && <h1>Application Forms</h1>}
         {selectedContent === 'Skill Set' && <h1>View Your Skills</h1>}
       </div>
-
-      {/* <footer */}
+        <footer className={`footer ${collapse ? 'footer-full' : ''}`}>
+          <p>Lincese v 1.0</p>
+          <p className="footer-end">Copyright &copy;2024</p>
+        </footer>
     </div>
   );
 };

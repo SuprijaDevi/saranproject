@@ -6,7 +6,7 @@
     margin-left: 250px;
     flex-grow: 1;
     transition: margin-left 0.3s ease;
-    background-color: rgb(131, 144, 177);
+    /* background-color: rgb(131, 144, 177); */
 }
 
 .home-wrapper.full {
@@ -15,7 +15,7 @@
 
 .home-content {
     flex: 1; 
-    padding: 70px 20px;
+    padding: 20px;
     transition: margin-left 0.3s ease;
   }
 
@@ -28,20 +28,26 @@
   .footer {
     display: flex;
     justify-content: space-between;
-    position: fixed; 
-    margin-left: 250px;
-    text-align: center;
-    padding: 10px;
-    width: 82.3%;
-    border-top: 1px solid grey;
+    position: fixed;
     bottom: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    padding: 10px;
+    border-top: 1px solid grey;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-full {
+    left: 0;
+    width: 100%;
   }
   
   .footer p {
     margin: 0;
-  } 
-
+  }
+  
   .footer-end {
     margin-left: auto;
   }
+  
   
