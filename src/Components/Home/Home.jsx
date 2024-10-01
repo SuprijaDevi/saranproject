@@ -5,7 +5,7 @@ import './Home.css';
 
 const Home = ({ selectedContent, collapse }) => {
   return (
-    <div className={`home-wrapper ${collapse ? 'full' : ''}`}>
+    <div className={`home-wrapper`}>
       <div className="home-content">
         {selectedContent === 'Home' && <h1>Welcome to the Home Page!</h1>}
         
@@ -19,8 +19,33 @@ const Home = ({ selectedContent, collapse }) => {
         {selectedContent === 'Timetable' && <h1>View the Timetable</h1>}
         {selectedContent === 'Application' && <h1>Application Forms</h1>}
         {selectedContent === 'Skill Set' && <h1>View Your Skills</h1>}
+       
+        {/* <div>
+        <h1>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis molestiae quas nulla voluptate delectus hic doloribus temporibus ad magni nemo libero quidem totam, harum illum error iure, veniam dolores eos?
+        </h1>
+        <h1>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis molestiae quas nulla voluptate delectus hic doloribus temporibus ad magni nemo libero quidem totam, harum illum error iure, veniam dolores eos?
+        </h1>
+        <h1>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis molestiae quas nulla voluptate delectus hic doloribus temporibus ad magni nemo libero quidem totam, harum illum error iure, veniam dolores eos?
+        </h1>
+        <h1>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis molestiae quas nulla voluptate delectus hic doloribus temporibus ad magni nemo libero quidem totam, harum illum error iure, veniam dolores eos?
+        </h1>
+        <h1>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis molestiae quas nulla voluptate delectus hic doloribus temporibus ad magni nemo libero quidem totam, harum illum error iure, veniam dolores eos?
+        </h1>
+        <h1>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis molestiae quas nulla voluptate delectus hic doloribus temporibus ad magni nemo libero quidem totam, harum illum error iure, veniam dolores eos?
+        </h1>
+        <h1>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis molestiae quas nulla voluptate delectus hic doloribus temporibus ad magni nemo libero quidem totam, harum illum error iure, veniam dolores eos?
+        </h1>
+        </div> */}
+
       </div>
-        <footer className={`footer ${collapse ? 'footer-full' : ''}`}>
+        <footer className={`footer`}>
           <p>Lincese v 1.0</p>
           <p className="footer-end">Copyright &copy;2024</p>
         </footer>

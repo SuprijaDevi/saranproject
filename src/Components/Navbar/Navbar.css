@@ -2,13 +2,11 @@
     display: flex;
     justify-content: space-between;
     position: sticky;
-    overflow: hidden;
     background-color: white;
     top: 0;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 20px;
     border-bottom: 1px solid grey;
-    z-index: 999;
   }
   
   .logo {
@@ -44,6 +42,7 @@
     gap: 20px;
     align-items: center;
     justify-content: flex-end;
+    position: relative;
   }
   
   .icon {
@@ -53,15 +52,15 @@
 
   .dropdown-menu {
     position: absolute;
-    top: 50px; 
-    right: 10px;
+    bottom: 0px; 
+    right: 0px;
     background-color: white;
     padding: 20px;
     border: 1px solid grey;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-20px);
+    transform: translateY(-50px);
     transition: 0.3s ease;
     z-index: 9999;
   }
@@ -69,7 +68,7 @@
   .dropdown-menu.active {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateY(110px);
   }
   
   .dropdown-menu p {

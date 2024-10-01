@@ -1,19 +1,16 @@
 .sidebar {
-    position: absolute;    
-    top: 0px;
-    left: -250px;
     height: 100%;
     border-right: 1px solid grey;
     transition: left 0.3s ease;
-    overflow: hidden;
-    width: 0;
+    width: 0px;
+    background-color: white;
+    transition: min-width .4s ease-in-out;
+    transition: width .4s ease-in-out;
+    /* position: fixed; */
   }
   
   .sidebar.open {
-    position: none!important;
-    left: 0;
-    top: 0;
-    width: 250px;
+    min-width: 250px;
   }
 
   .sidebar ul {
