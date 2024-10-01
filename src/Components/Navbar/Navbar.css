@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     position: sticky;
-    background-color: white;
+    background-color: #F6F5F5;
     top: 0;
     align-items: center;
     padding: 10px 20px;
@@ -21,6 +21,7 @@
     cursor: pointer;
     margin-left: 150px;
     font-size: 1.3rem;
+    color: #394263;
     /* justify-content: flex-end; */
   }
   
@@ -33,7 +34,7 @@
   
   .search-bar input {
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid grey;
     outline: none;
   }
   
@@ -48,6 +49,7 @@
   .icon {
     font-size: 1.5rem;
     cursor: pointer;
+    color: #394263;
   }
 
   .dropdown-menu {
@@ -56,7 +58,6 @@
     right: 0px;
     background-color: white;
     padding: 20px;
-    border: 1px solid grey;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;

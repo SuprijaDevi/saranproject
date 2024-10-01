@@ -3,9 +3,10 @@
     border-right: 1px solid grey;
     transition: left 0.3s ease;
     width: 0px;
-    background-color: white;
-    transition: min-width .4s ease-in-out;
-    transition: width .4s ease-in-out;
+    background-color: #394263;
+    transition: min-width .5s ease;
+    transition: width .5s ease;
+    color: white;
     /* position: fixed; */
   }
   
@@ -21,11 +22,14 @@
 }
 
 .sidebar li {
-    margin-top: 20px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
+  margin-top: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background-color: #213555;
+}
   .sidebar li ul {
     list-style: none;
     padding-left: 20px;
