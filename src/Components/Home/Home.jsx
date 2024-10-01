@@ -3,9 +3,9 @@ import January from './January';
 import February from './February';
 import './Home.css';
 
-const Home = ({ selectedContent }) => {
+const Home = ({ selectedContent, collapse }) => {
   return (
-    <div className="home-wrapper">
+    <div className={`home-wrapper ${collapse ? 'full' : ''}`}>
       <div className="home-content">
         {selectedContent === 'Home' && <h1>Welcome to the Home Page!</h1>}
         
@@ -21,10 +21,7 @@ const Home = ({ selectedContent }) => {
         {selectedContent === 'Skill Set' && <h1>View Your Skills</h1>}
       </div>
 
-      <footer className="footer">
-        <p>License v 1.0</p>
-        <p className='footer-end'>Copyright &copy;2024</p>
-      </footer>
+      {/* <footer */}
     </div>
   );
 };

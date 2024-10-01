@@ -10,7 +10,7 @@ const Sidebar = ({ isOpen, setSelectedContent }) => {
   };
 
   return (
-    <div className={`sidebar ${isOpen ? '' : 'open'}`}>
+    <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <ul>
         <li onClick={() => setSelectedContent('Home')}>Home</li>
         <li>

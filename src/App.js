@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
   const [selectedContent, setSelectedContent] = useState('Home');
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -15,9 +15,9 @@ function App() {
   return (
     <div className="App">
       <Navbar toggleSidebar={toggleSidebar} />
-      <div className={`main-container ${sidebarOpen ? '' : 'sidebar-open'}`}>
+      <div className={`main-container`}>
         <Sidebar isOpen={sidebarOpen} setSelectedContent={setSelectedContent} />
-        <Home selectedContent={selectedContent} />
+        <Home selectedContent={selectedContent} collapse={!sidebarOpen}/>
       </div>
     </div>
   );

@@ -1,12 +1,17 @@
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
 .main-container {
   display: flex;
   transition: margin-left 0.3s ease; 
+  width: full;
+  position: relative;
+  overflow: auto;
 }
 
 .sidebar-open .home-content {
-  margin-left: 250px; 
+  /* margin-left: 250px;  */
 }
