@@ -3,8 +3,8 @@
     transition: left 0.3s ease;
     width: 0px;
     background-color: #394263;
-    transition: min-width .5s ease;
-    transition: width .5s ease;
+    overflow: hidden;
+    transition: left 0.5s ease, left 0.5s ease;
     color: #eaedf1;
     /* position: fixed; */
   }
@@ -38,11 +38,16 @@
     list-style: none;
     padding-left: 20px;
     margin-top: 5px;
-  }
+  } 
 
   .sidebar li ul li {
     margin-bottom: 5px;
     font-weight: normal;
+    color: #fff;
+  }
+
+  .sidebar li ul li:hover {
+    color: white;
   }
 
   .list-item {

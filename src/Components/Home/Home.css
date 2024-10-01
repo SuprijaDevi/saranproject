@@ -3,7 +3,7 @@
     flex-direction: column;
     flex-grow: 1;
     transition: margin-left 0.3s ease;
-    background-color: white;
+    /* background-color: white; */
 }
 
 .home-content {
@@ -13,6 +13,7 @@
     transition: margin-left 0.3s ease;
     height: 120vh;
     overflow-y: scroll;
+    background-color: #DDE6ED;
   }
 
   .home-content h1 {
@@ -23,7 +24,7 @@
   
   .footer {
     display: flex;
-    background-color: #E5E1DA;
+    background-color: #F6F5F5;
     justify-content: space-between;
     max-width: 100%;
     padding: 5px 15px;
