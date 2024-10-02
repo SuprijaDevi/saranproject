@@ -1,12 +1,17 @@
-.home-wrapper {
+  .home-wrapper {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     transition: margin-left 0.3s ease;
     /* background-color: white; */
-}
+  }
 
-.home-content {
+  .breadcrumbs p{
+    display: flex;
+    margin: 0;
+  }
+
+  .home-content {
     flex: 1; 
     flex-grow: 1;
     padding: 20px;
@@ -20,6 +25,15 @@
     font-size: 2rem;
     font-weight: bold;
     color: #333;
+  }
+
+  .chat-icon {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    font-size: 40px;
+    color: #213555;
+    cursor: pointer;
   }
   
   .footer {

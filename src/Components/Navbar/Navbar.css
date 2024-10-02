@@ -6,7 +6,7 @@
     box-shadow: 0 4px #F6F5F5;
     top: 0;
     align-items: center;
-    padding: 10px 20px;
+    padding: 5px 20px;
   }
   
   .logo {
@@ -33,8 +33,8 @@
   }
   
   .search-bar input {
-    padding: 10px;
-    border: 1px solid grey;
+    padding: 7px;
+    border: 1px solid #394263;
     outline: none;
   }
   
@@ -56,12 +56,13 @@
     position: absolute;
     bottom: 0px; 
     right: 0px;
+    color: #394263;
     background-color: white;
-    padding: 20px;
+    padding: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(30px);
+    transform: translateY(70px);
     transition: 0.3s ease;
     z-index: 9999;
   }
