@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Navbar toggleSidebar={toggleSidebar} />
-      <div className={`main-container`}>
+      <div className={`main-container ${sidebarOpen ? 'sidebar-open' : ''}`}>
         <Sidebar isOpen={sidebarOpen} setSelectedContent={setSelectedContent} />
         <Home selectedContent={selectedContent} collapse={!sidebarOpen}/>
       </div>

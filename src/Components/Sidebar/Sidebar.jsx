@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaAngleDown, FaAngleUp } from "react-icons/fa6"; // Import up icon
+import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 import './Sidebar.css';
 
 const Sidebar = ({ isOpen, setSelectedContent }) => {
