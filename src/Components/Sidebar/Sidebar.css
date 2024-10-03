@@ -1,16 +1,15 @@
 .sidebar {
     height: 100%;
-    transition: left 0.3s ease;
     width: 0px;
     background-color: #394263;
     overflow: hidden;
-    transition: left 0.5s ease;
+    transition: width 0.3s ease;
     color: #eaedf1;
     /* position: fixed; */
   }
   
   .sidebar.open {
-    min-width: 240px;
+    width: 240px;
   }
 
   .sidebar ul {

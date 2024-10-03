@@ -34,6 +34,84 @@
     font-size: 40px;
     color: #213555;
     cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .chat-sidebar {
+    height: 100%;
+    width: 0px;
+    background-color: #DDE6ED;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    color: #213555;
+  }
+  
+  .chat-sidebar.open {
+    width: 230px;
+  }
+
+  .chat-sidebar.open ~ .chat-icon {
+    transform: translateX(-230px); 
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .user-form {
+    background-color: #F6F5F5;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 1px solid #F6F5F5;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    text-align: left;
+    color: #213555;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-group input {
+    margin-right: 4px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #213555;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .submit-button:hover {
+    background-color: #1a2945;
   }
   
   .footer {
@@ -44,7 +122,7 @@
     padding: 5px 15px;
     transition: all 0.3s ease;
   }
-  
+
   .footer p {
     margin: 0;
   }

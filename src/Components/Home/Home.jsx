@@ -1,10 +1,9 @@
 import React from 'react';
 import January from './January';
 import February from './February';
-import { BsChatSquareDotsFill } from "react-icons/bs";
 import './Home.css';
 
-const Home = ({ selectedContent, collapse }) => {
+const Home = ({ selectedContent, collapse, toggleChatSidebar }) => {
 
   const breadcrumbMap = {
     'Home': '/home',
@@ -26,6 +25,7 @@ const Home = ({ selectedContent, collapse }) => {
         <header className={`breadcrumbs`}>
           <p>{breadcrumb}</p>
         </header>
+
         {selectedContent === 'Home' && <h1>Welcome to the Home Page!</h1>}
         {selectedContent === 'January' && <January />}
         {selectedContent === 'February' && <February />}
@@ -36,15 +36,33 @@ const Home = ({ selectedContent, collapse }) => {
         {selectedContent === 'Application' && <h1>Application Forms</h1>}
         {selectedContent === 'Skill Set' && <h1>View Your Skills</h1>}
 
-        <BsChatSquareDotsFill className='chat-icon' />
+        <div className='form-container'>
+          <form className='user-form'>
+            <div className="form-group">
+              <label htmlFor="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Password:</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password" required />
+            </div>
+            <div className="form-group checkbox-group">
+              <input type="checkbox" id="remember-me" name="remember-me" />
+              <label htmlFor="remember-me">Remember me</label>
+            </div>
+            <button type="submit" className="submit-button">Submit</button>
+          </form>
+        </div>
       </div>
 
       <footer className={`footer`}>
         <p>License v 1.0</p>
         <p className="footer-end">Copyright &copy;2024</p>
       </footer>
-      
-
     </div>
   );
 };
